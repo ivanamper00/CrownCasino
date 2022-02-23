@@ -1,4 +1,4 @@
-package com.dakuinternational.crown_casino
+package com.dakuinternational.common.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
@@ -7,9 +7,10 @@ import com.dakuinternational.common.event.UiEvent
 
 class ActivityViewModel: ViewModel() {
 
-
     private val _uiEvent = SingleLiveEvent<UiEvent>()
     val activityEvent: LiveData<UiEvent> get() = _uiEvent
 
-
+    fun SplashDone() {
+        _uiEvent.value = ActivityEvent.SplashDone
+    }
 }

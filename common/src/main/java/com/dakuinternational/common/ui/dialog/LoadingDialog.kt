@@ -5,12 +5,16 @@ import android.content.Context
 import android.os.Bundle
 import android.view.ViewGroup
 import com.dakuinternational.common.R
+import com.dakuinternational.common.databinding.DialogLoadingBinding
 
 class LoadingDialog(context: Context): Dialog(context) {
 
+    lateinit var binding: DialogLoadingBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.dialog_loading)
+        binding = DialogLoadingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         setCancelable(false)
     }
 

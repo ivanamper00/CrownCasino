@@ -5,7 +5,7 @@ import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import com.dakuinternational.common.ui.dialog.LoadingDialog
 
-abstract class BaseActivity(layoutId: Int) : AppCompatActivity(layoutId){
+abstract class BaseActivity: AppCompatActivity(){
 
     lateinit var loadingDialog: LoadingDialog;
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {

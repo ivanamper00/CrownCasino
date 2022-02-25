@@ -1,5 +1,7 @@
 package com.dakuinternational.crown_casino.presentation.activity
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +18,7 @@ import com.dakuinternational.crown_casino.R
 import com.dakuinternational.crown_casino.databinding.ActivityMainBinding
 import com.dakuinternational.crown_casino.components.delegate.EventFlow
 import com.dakuinternational.crown_casino.presentation.fragments.ProceduresFragmentDirections
+import com.kaiguanjs.utils.YQCUtils
 
 class MainActivity : BaseActivity(), EventFlow {
 
@@ -28,6 +31,10 @@ class MainActivity : BaseActivity(), EventFlow {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupViews()
+    }
+
+    private fun setupViews() {
         val inflater = LayoutInflater.from(this)
         binding = ActivityMainBinding.inflate(inflater, null, false)
         setContentView(binding.root)
@@ -42,18 +49,13 @@ class MainActivity : BaseActivity(), EventFlow {
             )
             true
         }
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            setHideBottomNav(destination.id == R.id.splashFragment)
-        }
 
         viewModel.activityEvent.observe(this){
             when(it){
                 is UiEvent.Loading -> showLoading(it.isLoading)
-                is ActivityEvent.SplashDone -> navController.navigate(R.id.gameFragment)
                 is ActivityEvent.ProcedurePage -> navController.navigate(R.id.proceduresFragment)
             }
         }
-
 
     }
 
@@ -64,6 +66,11 @@ class MainActivity : BaseActivity(), EventFlow {
     override fun description(data: DataContent) {
         val direction = ProceduresFragmentDirections.navigateToDescription(data)
         navController.navigate(direction)
+    }
+
+
+    companion object{
+        fun createIntent(context: Context): Intent = Intent(context, MainActivity::class.java)
     }
 
 }

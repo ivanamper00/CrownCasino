@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/drawable/image_gradient.xml" value="0.25" />
         <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/layout/activity_main.xml" value="0.24375" />
+        <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/layout/fragment_about.xml" value="0.24427083333333333" />
         <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/layout/fragment_dashboard.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/layout/fragment_description.xml" value="0.24427083333333333" />
         <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/layout/fragment_game.xml" value="0.24427083333333333" />
+        <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/layout/fragment_procedures.xml" value="0.24427083333333333" />
         <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/layout/fragment_rules.xml" value="0.24427083333333333" />
         <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/layout/item_procedure.xml" value="0.22" />
         <entry key="..\:/Users/dipaa/AndroidStudioProjects/BTInternational/CrownCasino/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18229166666666666" />

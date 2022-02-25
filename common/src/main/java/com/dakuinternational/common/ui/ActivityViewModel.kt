@@ -11,7 +11,7 @@ class ActivityViewModel: ViewModel() {
     val activityEvent: LiveData<UiEvent> get() = _uiEvent
 
     fun SplashDone() {
-        _uiEvent.value = ActivityEvent.SplashDone
+//        _uiEvent.value = ActivityEvent.SplashDone
     }
 
     fun toProcedure() {

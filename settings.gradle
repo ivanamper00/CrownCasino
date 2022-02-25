@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "CrownCasino"
 include ':app'
 include ':common'
+include ':yqcbee'

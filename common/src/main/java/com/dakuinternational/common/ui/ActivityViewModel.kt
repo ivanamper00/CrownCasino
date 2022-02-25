@@ -13,4 +13,8 @@ class ActivityViewModel: ViewModel() {
     fun SplashDone() {
         _uiEvent.value = ActivityEvent.SplashDone
     }
+
+    fun toProcedure() {
+        _uiEvent.value = ActivityEvent.ProcedurePage
+    }
 }

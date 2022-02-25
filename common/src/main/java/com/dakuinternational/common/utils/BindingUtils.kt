@@ -9,6 +9,5 @@ import com.dakuinternational.common.R
 fun srcUri(view: ImageView, uri: String){
     Glide.with(view.context)
         .load(uri)
-        .placeholder(R.drawable.ic_baseline_broken_image_24)
         .into(view)
 }

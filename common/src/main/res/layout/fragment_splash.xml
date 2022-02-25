@@ -7,17 +7,11 @@
             name="assets"
             type="com.dakuinternational.common.ui.components.Assets"/>
     </data>
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.splash.SplashFragment">
+        android:background="@drawable/ic_splash"
+        tools:context="com.dakuinternational.crown_casino.SplashFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:scrUri="@{assets.splashScreen}"/>
-
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

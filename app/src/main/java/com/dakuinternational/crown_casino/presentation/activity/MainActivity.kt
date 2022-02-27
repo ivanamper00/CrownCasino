@@ -18,7 +18,7 @@ import com.dakuinternational.crown_casino.R
 import com.dakuinternational.crown_casino.databinding.ActivityMainBinding
 import com.dakuinternational.crown_casino.components.delegate.EventFlow
 import com.dakuinternational.crown_casino.presentation.fragments.ProceduresFragmentDirections
-import com.kaiguanjs.utils.YQCUtils
+import com.google.gson.Gson
 
 class MainActivity : BaseActivity(), EventFlow {
 
@@ -64,7 +64,7 @@ class MainActivity : BaseActivity(), EventFlow {
     }
 
     override fun description(data: DataContent) {
-        val direction = ProceduresFragmentDirections.navigateToDescription(data)
+        val direction = ProceduresFragmentDirections.navigateToDescription(Gson().toJson(data))
         navController.navigate(direction)
     }
 

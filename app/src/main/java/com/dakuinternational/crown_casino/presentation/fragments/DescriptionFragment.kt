@@ -3,10 +3,12 @@ package com.dakuinternational.crown_casino.presentation.fragments
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.navArgs
+import com.dakuinternational.common.DataContent
 import com.dakuinternational.common.base.BaseFragment
 import com.dakuinternational.common.binding.viewBinding
 import com.dakuinternational.crown_casino.R
 import com.dakuinternational.crown_casino.databinding.FragmentDescriptionBinding
+import com.google.gson.Gson
 
 class DescriptionFragment : BaseFragment(R.layout.fragment_description) {
 
@@ -15,7 +17,7 @@ class DescriptionFragment : BaseFragment(R.layout.fragment_description) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.description = args.dataContent
+        binding.description = Gson().fromJson(args.dataContent, DataContent::class.java)
     }
 
 }
